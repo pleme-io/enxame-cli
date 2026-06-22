@@ -59,7 +59,11 @@ fn cmd_info(path: &str) -> Result<(), String> {
 
     println!("name        {}", m.info.name);
     println!("info-hash   {}", m.info_hash);
-    println!("pieces      {} × {} bytes", m.info.piece_count(), m.info.piece_length);
+    println!(
+        "pieces      {} × {} bytes",
+        m.info.piece_count(),
+        m.info.piece_length
+    );
     println!("total       {} bytes", m.info.total_length());
     println!("private     {}", m.info.private);
     if let Some(announce) = &m.announce {
