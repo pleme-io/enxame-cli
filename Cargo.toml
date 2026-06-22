@@ -1,6 +1,6 @@
 [package]
 name = "enxame-cli"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 rust-version = "1.91.0"
 description = "enxame — the ENXAME BitTorrent command-line client: inspect .torrent files and magnet links (name, files, info-hash, trackers) and verify content. Part of the pleme-io ENXAME suite."
