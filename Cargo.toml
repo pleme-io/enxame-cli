@@ -1,0 +1,25 @@
+[package]
+name = "enxame-cli"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.91.0"
+description = "enxame — the ENXAME BitTorrent command-line client: inspect .torrent files and magnet links (name, files, info-hash, trackers) and verify content. Part of the pleme-io ENXAME suite."
+homepage = "https://github.com/pleme-io/enxame-cli"
+repository = "https://github.com/pleme-io/enxame-cli"
+readme = "README.md"
+license = "MIT"
+keywords = ["bittorrent", "torrent", "cli", "magnet", "pleme-io"]
+publish = true
+
+[[bin]]
+name = "enxame"
+path = "src/main.rs"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+
+[dependencies]
+enxame-metainfo = { path = "../enxame-metainfo", version = "0.1" }
+enxame-magnet = { path = "../enxame-magnet", version = "0.1" }
