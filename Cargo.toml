@@ -23,3 +23,9 @@ missing_panics_doc = "allow"
 [dependencies]
 enxame-metainfo = { path = "../enxame-metainfo", version = "0.1" }
 enxame-magnet = { path = "../enxame-magnet", version = "0.1" }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
